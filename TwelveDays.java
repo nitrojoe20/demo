@@ -16,47 +16,65 @@ public class TwelveDays
 	  
 	  // calls method to get user choice from static method below.  Nice!
       choice = getChoice();
+      int choice2 = getChoice();
 
 	  // convert to switch
-      if (choice == 12)
+      switch(choice){
+      case 1:
+          thing = "A partridge in a pear tree";
+          break;
+      case 12:
            thing = "Twelve drummers drumming";
-      else if (choice == 11)
+           break;
+      case 11:
            thing = "Eleven pipers piping";
-      else if (choice == 10)
+           break;
+      case 10:
            thing = "Ten lords a-leaping";
-      else if (choice == 9)
+           break;
+      case 9:
            thing = "Nine ladies dancing";
-      else if (choice == 8)
+           break;
+      case 8:
            thing = "Eight maids a-milking";
-      else if (choice == 7)
+           break;
+      case 7:
            thing = "Seven swans a-swimming";
-      else if (choice == 6)
+           break;
+      case 6:
            thing = "Six geese a-laying";
-      else if (choice == 5)
+           break;
+      case 5:
            thing = "Five golden rings";
-      else if (choice == 4)
+           break;
+      case 4:
            thing = "Four calling birds";
-      else if (choice == 3)
+           break;
+      case 3:
            thing = "Three French hens";
-      else if (choice == 2)
+           break;
+      case 2:
            thing = "Two turtle doves and";
-      else if (choice == 1)
-           thing = "A partridge in a pear tree";
-      else
+           break;
+      default:
            thing = "Invalid choice";
-	   
+      }
 	  // This is ugly... let's also convert it to a switch... this is just a little trickier
-      if(choice >= 4)
+      
+      switch(choice2){
+      case 4:
          suffix = "th";
-      else
-        if(choice == 3)
-          suffix = "rd";
-        else
-          if(choice == 2)
-            suffix = "nd";
-          else
-            suffix = "st";
-		
+         break;
+      case 3:
+         suffix = "rd";
+         break;
+      case 2:
+         suffix = "nd";
+         break;
+       default:
+         suffix = "st";
+      }
+      
 	  System.out.println("\nOn the " + choice + suffix +
           " day of Christmas\n" +
           "My true love gave to me" + thing);
